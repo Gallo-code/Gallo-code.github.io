@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pueblito Craft - Servidor de Minecraft</title>
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header / Hero Section -->
+    <header>
+        <h1>⚔️ Pueblito Craft ⚔️</h1>
+        <p>Construye, sobrevive y defiende tu base. ¡Los raideos están permitidos pero tendrás la tecnología de SecurityCraft de tu lado!</p>
+        
+        <div class="server-ip-box">
+            <span class="ip-text" id="serverIp">mc.pueblitocraft.com</span>
+            <button class="btn-copy" onclick="copyIp()">Copiar IP</button>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <!-- Discord Banner Destacado -->
+        <div class="discord-box">
+            <h2>💬 ¡Únete a nuestra Comunidad de Discord!</h2>
+            <p style="color: var(--text-muted); max-width: 600px; margin: 10px auto 0;">
+                Entérate de las últimas novedades, habla con otros jugadores, reporta dudas y organiza tus alianzas para raideos.
+            </p>
+            <a href="https://discord.gg/bbDrcQTVZn" target="_blank" class="btn-discord">
+                <svg width="28" height="28" viewBox="0 0 127.14 96.36" fill="currentColor">
+                    <path d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1,105.25,105.25,0,0,0,32.19-16.14c2.64-27.38-4.51-51.11-18.91-72.15ZM42.45,65.69C36.18,65.69,31,60,31,53S36,40.3,42.45,40.3C48.92,40.3,54,46,53.87,53,53.87,60,48.83,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5.07-12.7,11.44-12.7C91.1,40.3,96.2,46,96.07,53,96.07,60,91,65.69,84.69,65.69Z"/>
+                </svg>
+                Entrar al Discord Oficial
+            </a>
+        </div>
+
+        <!-- Modpack Download -->
+        <div class="download-box">
+            <h2>📦 Pack de Mods Oficial</h2>
+            <p style="color: var(--text-muted); margin-top: 8px;">
+                Descarga el instalador con todos los mods necesarios para poder entrar al servidor (incluyendo SecurityCraft).
+            </p>
+            <!-- Reemplaza el enlace por tu link de MediaFire -->
+            <a href="https://www.mediafire.com" target="_blank" class="btn-download">
+                📥 Descargar Mods en MediaFire
+            </a>
+        </div>
+
+        <!-- Features -->
+        <h2 class="section-title">Características del Servidor</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>💣 Raideos Permitidos</h3>
+                <p>Puedes saquear y atacar bases enemigas. ¡Prepárate para defender tus tesoros o conquistar los de los demás!</p>
+            </div>
+            <div class="card">
+                <h3>🛡️ SecurityCraft Mod</h3>
+                <p>Protege tus construcciones con torretas, paneles de clave, escáneres de retina, bloques reforzados y minas invisibles.</p>
+            </div>
+            <div class="card">
+                <h3>🏘 Comunidades y Pueblos</h3>
+                <p>Forma alianzas con otros jugadores para construir defensas impenetrables y dominar el mapa en equipo.</p>
+            </div>
+        </div>
+
+        <!-- Creadores / Streamers -->
+        <h2 class="section-title">Streamers Oficiales</h2>
+        <div class="streamers-grid">
+
+            <!-- ISRRA_0 -->
+            <a href="https://www.twitch.tv/isrra_0" target="_blank" class="streamer-card" id="card-isrra_0">
+                <div class="streamer-avatar-wrapper">
+                    <img src="https://static-cdn.jtvnw.net/user-default-pictures-uv/75305db0-3a92-43d8-1565-22b9e0b7f0e6-profile_image-300x300.jpg" alt="isrra_0" class="streamer-avatar" id="avatar-isrra_0">
+                    <span class="badge-live" id="live-isrra_0">🔴 EN VIVO</span>
+                    <span class="badge-offline" id="off-isrra_0">OFFLINE</span>
+                </div>
+                <div class="streamer-name">isrra_0</div>
+                <div class="streamer-status" id="status-isrra_0">Desconectado</div>
+                <div class="btn-twitch">Ver en Twitch</div>
+            </a>
+
+            <!-- GAYO_10 -->
+            <a href="https://www.twitch.tv/gayo_10" target="_blank" class="streamer-card" id="card-gayo_10">
+                <div class="streamer-avatar-wrapper">
+                    <img src="https://static-cdn.jtvnw.net/user-default-pictures-uv/75305db0-3a92-43d8-1565-22b9e0b7f0e6-profile_image-300x300.jpg" alt="gayo_10" class="streamer-avatar" id="avatar-gayo_10">
+                    <span class="badge-live" id="live-gayo_10">🔴 EN VIVO</span>
+                    <span class="badge-offline" id="off-gayo_10">OFFLINE</span>
+                </div>
+                <div class="streamer-name">gayo_10</div>
+                <div class="streamer-status" id="status-gayo_10">Desconectado</div>
+                <div class="btn-twitch">Ver en Twitch</div>
+            </a>
+
+            <!-- KISSUKEY -->
+            <a href="https://www.twitch.tv/kissukey" target="_blank" class="streamer-card" id="card-kissukey">
+                <div class="streamer-avatar-wrapper">
+                    <img src="https://static-cdn.jtvnw.net/user-default-pictures-uv/75305db0-3a92-43d8-1565-22b9e0b7f0e6-profile_image-300x300.jpg" alt="kissukey" class="streamer-avatar" id="avatar-kissukey">
+                    <span class="badge-live" id="live-kissukey">🔴 EN VIVO</span>
+                    <span class="badge-offline" id="off-kissukey">OFFLINE</span>
+                </div>
+                <div class="streamer-name">kissukey</div>
+                <div class="streamer-status" id="status-kissukey">Desconectado</div>
+                <div class="btn-twitch">Ver en Twitch</div>
+            </a>
+
+            <!-- ELDANYELON -->
+            <a href="https://www.twitch.tv/eldanyelon" target="_blank" class="streamer-card" id="card-eldanyelon">
+                <div class="streamer-avatar-wrapper">
+                    <img src="https://static-cdn.jtvnw.net/user-default-pictures-uv/75305db0-3a92-43d8-1565-22b9e0b7f0e6-profile_image-300x300.jpg" alt="eldanyelon" class="streamer-avatar" id="avatar-eldanyelon">
+                    <span class="badge-live" id="live-eldanyelon">🔴 EN VIVO</span>
+                    <span class="badge-offline" id="off-eldanyelon">OFFLINE</span>
+                </div>
+                <div class="streamer-name">eldanyelon</div>
+                <div class="streamer-status" id="status-eldanyelon">Desconectado</div>
+                <div class="btn-twitch">Ver en Twitch</div>
+            </a>
+
+        </div>
+
+        <!-- Installation Guide -->
+        <h2 class="section-title">¿Cómo Unirse al Servidor?</h2>
+        <ol class="steps">
+            <li><strong>Instala Forge / Fabric:</strong> Asegúrate de tener instalada la versión de Java adecuada según la versión del servidor.</li>
+            <li><strong>Descarga el pack:</strong> Haz clic en el botón de arriba para bajar el archivo `.zip` de MediaFire.</li>
+            <li><strong>Mueve los mods:</strong> Descomprime los archivos dentro de tu carpeta <code>.minecraft/mods</code>.</li>
+            <li><strong>Inicia el juego:</strong> Abre Minecraft con el perfil del modloader y agrega nuestra IP en el multijugador.</li>
+        </ol>
+
+        <!-- Reglas de Respeto y Convivencia -->
+        <h2 class="section-title">Reglas de Convivencia</h2>
+        <div class="card" style="margin-bottom: 50px;">
+            <ul style="padding-left: 20px; display: flex; flex-direction: column; gap: 12px;">
+                <li>
+                    <strong>🤝 Fair Play (Juego Limpio):</strong> Los raideos y el PvP son parte del juego, pero ganar con trampa no. El uso de <em>X-Ray, KillAura, Fly</em> o cualquier hack/client modificado resultará en <strong>Ban Permanente</strong> sin derecho a reclamo.
+                </li>
+                <li>
+                    <strong>💬 Chat Limpio y Respetuoso:</strong> Se vale la rivalidad y el "toxicismo sano" del PvP, pero están estrictamente prohibidos los insultos discriminatorios, racismo, acoso personal, doxxing o amenazas fuera del juego.
+                </li>
+                <li>
+                    <strong>🛡️ Respeto a los Staff / Admins:</strong> El equipo de administración está para ayudar y mantener el orden. Sus decisiones son finales. Si tienes una queja o reporte, abre un ticket en Discord con pruebas.
+                </li>
+                <li>
+                    <strong>🛑 Prohibido el Spam y Publicidad:</strong> No hagas spam en el chat global ni promociones otros servidores, canales o enlaces ajenos a Pueblito Craft.
+                </li>
+                <li>
+                    <strong>⚠️ Aprovechamiento de Bugs:</strong> Si encuentras un fallo o bug del juego/mods, repórtalo en Discord. Aprovecharte de errores para duplicar ítems o atravesar bases causará la expulsión del servidor.
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Pueblito Craft. Servidor no oficial de Minecraft.</p>
+        <p style="margin-top: 5px;">¿Dudas o soporte? Únete a nuestro <a href="https://discord.gg/bbDrcQTVZn" target="_blank">Discord Oficial</a></p>
+    </footer>
+
+    <!-- JavaScript Externo -->
+    <script src="script.js"></script>
+</body>
+</html>
